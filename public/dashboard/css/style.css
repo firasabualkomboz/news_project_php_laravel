@@ -26,6 +26,13 @@ File: style.css
 /**  =====================
       Custom css start
 ==========================  **/
+.logo-text{
+    background-color: red;
+    padding: 10px;
+    margin-right: 40px;
+    margin-top: 10%;
+    color: #000;
+}
 body {
   background-color: #f3f3f3;
   font-size: 0.875em;

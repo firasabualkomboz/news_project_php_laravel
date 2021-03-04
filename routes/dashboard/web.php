@@ -1,8 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-
-
         Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function(){
 
             Route::resource('/index', 'DashboardController')->except(['show']);

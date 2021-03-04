@@ -19,6 +19,32 @@ Auth::routes();
 
 Route::get('/', 'HomeController@user_page')->name('front.home');
 Route::get('/home', 'HomeController@index')->name('home');
+route::get('/{slug}','HomeController@show_single_page')->name('front.single-page-posts');
+route::get('/category/{id}','HomeController@show_category')->name('front.category');
+
+//Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+//{
+//	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+//
+//	// Route::get('/', function()
+//	// {
+//        Route::get('/test', 'TestController@index')->name('test');
+//
+//        // Route::get('index', 'dashboard\DashboardController')->name('index');
+//
+//	// });
+//
+//
+//});
+
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
+    Route::get('/test', 'TestController@index')->name('test');
+});
+
 
 // all routes front pages
 

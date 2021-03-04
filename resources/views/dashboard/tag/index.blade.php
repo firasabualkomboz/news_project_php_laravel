@@ -2,10 +2,6 @@
 
 @section('content')
 
-
-
-
-
 <div class="pcoded-inner-content">
     <!-- Main-body start -->
     <div class="main-body">

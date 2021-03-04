@@ -8,7 +8,7 @@
                     <div class="footer-logo">
                         <a href="index.html" class="logo"><img src="{{asset('front/img/logo-alt.png')}}" alt=""></a>
                     </div>
-                    <p>Nec feugiat nisl pretium </p>
+                    <p> blog news </p>
                     <ul class="contact-social">
                         <li><a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
@@ -64,8 +64,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contacts</a></li>
-                    <li><a href="#">Advertise</a></li>
-                    <li><a href="#">Privacy</a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-md-pull-6">

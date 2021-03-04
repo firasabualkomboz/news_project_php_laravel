@@ -116,8 +116,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.html">
-                            <img class="img-fluid" src="{{asset('dashboard/images/logo.png')}}" alt="Theme-Logo" />
+                        <a href="/dashboard/index">
+                            <h4 class="logo-text">News</h4>
+                            {{-- <img class="img-fluid" src="{{asset('dashboard/images/logo.png')}}" alt="Theme-Logo" /> --}}
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
@@ -145,6 +146,7 @@
                             </li>
                         </ul>
                         <ul class="nav-right">
+
                             <li class="header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <i class="ti-bell"></i>
@@ -168,6 +170,23 @@
 
                                 </ul>
                             </li>
+                            {{-- start lang  --}}
+                            <li class="header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+                                    <i class="fa fa-language"></i>
+                                </a>
+                                <ul class="show-notification">
+                                    <li><h6>language</h6></li>
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <li>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            {{ $properties['native'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                                </ul>
+                            </li>
+                            {{-- end lang  --}}
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="{{asset('dashboard/images/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
@@ -289,10 +308,11 @@
 <li class="pcoded-hasmenu">
     <a href="javascript:void(0)" class="waves-effect waves-dark">
         <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-        <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">Tags</span>
+        <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">{{ trans('sidebar.tags') }}</span>
         <span class="pcoded-mcaret"></span>
     </a>
     <ul class="pcoded-submenu">
+        @if (auth()->user()->hasPermission('users_read'))
         <li class=" ">
             <a href="{{route('dashboard.tag.create')}}" class="waves-effect waves-dark">
                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -300,6 +320,7 @@
                 <span class="pcoded-mcaret"></span>
             </a>
         </li>
+        @endif
         <li class=" ">
             <a href="{{route('dashboard.tag.index')}}" class="waves-effect waves-dark">
                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
