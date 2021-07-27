@@ -32,7 +32,7 @@
 				</div>
 				<div class="col-md-4 hot-post-right">
 					<!-- post -->
-					<div class="post post-thumb">
+					{{-- <div class="post post-thumb">
 						<a class="post-img" href="blog-post.html"><img src="{{$second_post->photo}}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
@@ -43,11 +43,11 @@
                                 <li>{{$second_post->created_at->diffForHumans()}}</li>
 							</ul>
 						</div>
-					</div>
+					</div> --}}
 					<!-- /post -->
 
 					<!-- post -->
-					<div class="post post-thumb">
+					{{-- <div class="post post-thumb">
 						<a class="post-img" href="blog-post.html"><img src="{{$third_post->photo}}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
@@ -58,7 +58,7 @@
                                 <li>{{$third_post->created_at->diffForHumans()}}</li>
 							</ul>
 						</div>
-					</div>
+					</div> --}}
 					<!-- /post -->
 				</div>
 			</div>
