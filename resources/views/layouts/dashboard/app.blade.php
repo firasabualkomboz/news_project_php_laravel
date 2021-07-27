@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="{{asset('dashboard/pages/waves/css/waves.min.css')}}" type="text/css" media="all">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="{{asset('dashboard/css/bootstrap/css/bootstrap.min.css')}}">
+    {{-- bootstrap #5 --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- waves.css -->
     <link rel="stylesheet" href="{{asset('dashboard/pages/waves/css/waves.min.css')}}" type="text/css" media="all">
     <!-- themify icon -->
@@ -117,8 +119,7 @@
                             </div>
                         </div>
                         <a href="/dashboard/index">
-                            <h4 class="logo-text">News</h4>
-                            {{-- <img class="img-fluid" src="{{asset('dashboard/images/logo.png')}}" alt="Theme-Logo" /> --}}
+                            <a href="/" class="logo img-fluid"><img src="{{asset('front/img/logo-alt.png')}}" alt=""></a>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
@@ -249,30 +250,30 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="pcoded-hasmenu">
-                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                                        <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">Users permissions </span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class=" ">
-                                            <a href="{{route('dashboard.user.create')}}" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add user</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="{{route('dashboard.user.index')}}" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Posts</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="fa fa-users"></i></span>
+                    <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">Users permissions </span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class=" ">
+                        <a href="{{route('dashboard.user.create')}}" class="waves-effect waves-dark">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add user</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="{{route('dashboard.user.index')}}" class="waves-effect waves-dark">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Posts</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
 
-                                    </ul>
-                                </li>
+                </ul>
+            </li>
 
 
                                 {{-- end posts  --}}
@@ -350,7 +351,7 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
-                                        <li class=" ">
+                                        <li class="">
                                             <a href="{{route('dashboard.post.index')}}" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Posts</span>
@@ -361,6 +362,15 @@
                                     </ul>
                                 </li>
 
+<li class="pcoded-hasmenu">
+<a href="{{route('dashboard.ContentSocail.index')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="fa fa-retweet"></i></span>
+<span class="pcoded-mtext" href="">Content Social</span>
+<span class="pcoded-mcaret"></span>
+</a>
+<ul class="pcoded-submenu">
+</ul>
+</li>
 
 
                              </ul>
@@ -434,6 +444,8 @@
 <!-- custom js -->
 <script type="text/javascript" src="{{asset('dashboard/pages/dashboard/custom-dashboard.js')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard/js/script.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\Route;
 
         Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function(){
 
-            Route::resource('/index', 'DashboardController')->except(['show']);
+            Route::resource('index', 'DashboardController')->except(['show']);
 
             //  route user
             Route::resource('user', 'UserController')->except(['show']);
@@ -20,6 +20,11 @@ use Illuminate\Support\Facades\Route;
             //  route tag
             Route::resource('tag', 'TagController')->except(['show']);
             // end route tag
+
+            // route Content Social
+            Route::resource('ContentSocail', 'ContentSocialController')->except(['show']);
+
+            // end Content Socail
 
 
         });

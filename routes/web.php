@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {return view('welcome');});
+Route::get('/', 'HomeController@user_page')->name('front.home');
+
 
 Auth::routes();
 
-Route::get('/', 'HomeController@user_page')->name('front.home');
 Route::get('/home', 'HomeController@index')->name('home');
 route::get('/{slug}','HomeController@show_single_page')->name('front.single-page-posts');
 route::get('/category/{id}','HomeController@show_category')->name('front.category');
-
 //Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 //{
 //	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/

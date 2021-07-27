@@ -6,9 +6,8 @@
             <div class="col-md-3">
                 <div class="footer-widget">
                     <div class="footer-logo">
-                        <a href="index.html" class="logo"><img src="{{asset('front/img/logo-alt.png')}}" alt=""></a>
+                        <a href="/" class="logo"><img src="{{asset('front/img/logo-alt.png')}}" alt=""></a>
                     </div>
-                    <p> blog news </p>
                     <ul class="contact-social">
                         <li><a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>

@@ -8,7 +8,7 @@
 
             <!-- Page body start -->
 
-            <div class="alert alert-success" role="alert">   {{session('msg')}}</div>
+            <div class="alert alert-success" role="alert">{{session('msg')}}</div>
             <div class="page-body">
                 <div class="row">
                  <div class="col-md-6">
