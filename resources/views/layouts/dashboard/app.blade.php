@@ -415,20 +415,20 @@
 
 
 <!-- Required Jquery -->
-<script type="text/javascript" src="{{URL::asset('dashboard/js/jquery/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('dashboard/js/jquery-ui/jquery-ui.min.js ')}}"></script>
-<script type="text/javascript" src="{{URL::asset('dashboard/js/popper.js/popper.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('dashboard/js/bootstrap/js/bootstrap.min.js ')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/jquery/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/jquery-ui/jquery-ui.min.js ')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/popper.js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/bootstrap/js/bootstrap.min.js ')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard/pages/widget/excanvas.js ')}}"></script>
 <!-- waves js -->
-<script src="{{URL::asset('dashboard/pages/waves/js/waves.min.js')}}"></script>
+<script src="{{asset('dashboard/pages/waves/js/waves.min.js')}}"></script>
 <!-- jquery slimscroll js -->
 <script type="text/javascript" src="{{asset('dashboard/js/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
 <!-- modernizr js -->
 <script type="text/javascript" src="{{asset('dashboard/js/modernizr/modernizr.js ')}}"></script>
 <!-- slimscroll js -->
 <script type="text/javascript" src="{{URL::asset('dashboard/js/SmoothScroll.js')}}"></script>
-<script src="{{URL::asset('dashboard/js/jquery.mCustomScrollbar.concat.min.js ')}}"></script>
+<script src="{{asset('dashboard/js/jquery.mCustomScrollbar.concat.min.js ')}}"></script>
 <!-- Chart js -->
 <script type="text/javascript" src="{{asset('dashboard/js/chart.js/Chart.js')}}"></script>
 <!-- amchart js -->
