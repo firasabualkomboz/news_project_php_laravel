@@ -17,7 +17,7 @@ class CreateContentSocialsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
-            $table->stri9ng('icon');
+            $table->string('icon');
             $table->timestamps();
         });
     }
