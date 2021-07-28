@@ -243,13 +243,13 @@
                             <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Sections</div>
                             <ul class="pcoded-item pcoded-left-item">
 
-                                <li>
+                                {{-- <li>
                                     <a href="map-google.html" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
-                                </li>
+                                </li> --}}
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)" class="waves-effect waves-dark">
                     <span class="pcoded-micon"><i class="fa fa-users"></i></span>
