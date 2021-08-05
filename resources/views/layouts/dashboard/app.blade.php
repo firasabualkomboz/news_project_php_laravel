@@ -4,13 +4,6 @@
 <head>
 
     <title>Admin Dashboard @yield('title')</title>
-    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 10]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -119,7 +112,7 @@
                             </div>
                         </div>
                         <a href="/dashboard/index">
-                            <a href="/" class="logo img-fluid"><img src="{{asset('front/img/logo-alt.png')}}" alt=""></a>
+                            <a href="">Blog System | TechShef</a>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
@@ -190,7 +183,7 @@
                             {{-- end lang  --}}
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
-                                    <img src="{{asset('dashboard/images/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
+                                    <img src="{{asset('front/img/logo.png')}}" class="img-radius" alt="User-Profile-Image">
                                     <span>{{ Auth::user()->name }}</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
@@ -279,88 +272,85 @@
                                 {{-- end posts  --}}
 
 <li class="pcoded-hasmenu">
-    <a href="javascript:void(0)" class="waves-effect waves-dark">
-        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-        <span class="pcoded-mtext" href="" data-i18n="nav.basic-components.main">Categories</span>
-        <span class="pcoded-mcaret"></span>
-    </a>
-    <ul class="pcoded-submenu">
+<a href="javascript:void(0)" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+<span class="pcoded-mtext" href="" data-i18n="nav.basic-components.main">Categories</span>
+<span class="pcoded-mcaret"></span>
+</a>
+<ul class="pcoded-submenu">
 
-        @if (auth()->user()->hasPermission('users_read'))
-        <li class=" ">
-            <a href="{{route('dashboard.category.create')}}" class="waves-effect waves-dark">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Category</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        @endif
-        <li class="">
-            <a href="{{route('dashboard.category.index')}}" class="waves-effect waves-dark">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Category</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-
-    </ul>
+@if (auth()->user()->hasPermission('users_read'))
+<li class=" ">
+<a href="{{route('dashboard.category.create')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Category</span>
+<span class="pcoded-mcaret"></span>
+</a>
 </li>
+@endif
+<li class="">
+<a href="{{route('dashboard.category.index')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Category</span>
+<span class="pcoded-mcaret"></span>
+</a>
+</li>
+
+</ul>
+</li>
+
 {{-- start tag  --}}
 <li class="pcoded-hasmenu">
-    <a href="javascript:void(0)" class="waves-effect waves-dark">
-        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-        <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">{{ trans('sidebar.tags') }}</span>
-        <span class="pcoded-mcaret"></span>
-    </a>
-    <ul class="pcoded-submenu">
-        @if (auth()->user()->hasPermission('users_read'))
-        <li class=" ">
-            <a href="{{route('dashboard.tag.create')}}" class="waves-effect waves-dark">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Tags</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-        @endif
-        <li class=" ">
-            <a href="{{route('dashboard.tag.index')}}" class="waves-effect waves-dark">
-                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Tags</span>
-                <span class="pcoded-mcaret"></span>
-            </a>
-        </li>
-
-    </ul>
+<a href="javascript:void(0)" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+<span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">{{ trans('sidebar.tags') }}</span>
+<span class="pcoded-mcaret"></span>
+</a>
+<ul class="pcoded-submenu">
+@if (auth()->user()->hasPermission('users_read'))
+<li class=" ">
+<a href="{{route('dashboard.tag.create')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Tags</span>
+<span class="pcoded-mcaret"></span>
+</a>
+</li>
+@endif
+<li class=" ">
+<a href="{{route('dashboard.tag.index')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Tags</span>
+<span class="pcoded-mcaret"></span>
+</a>
+</li>
+</ul>
 </li>
 
+{{-- end category --}}
 
-
-         {{-- end category --}}
-
-                                <li class="pcoded-hasmenu">
-                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                                        <span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">Posts</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class=" ">
-                                            <a href="{{route('dashboard.post.create')}}" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Posts</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="{{route('dashboard.post.index')}}" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Posts</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
+<li class="pcoded-hasmenu">
+<a href="javascript:void(0)" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+<span class="pcoded-mtext" href=""  data-i18n="nav.basic-components.main">Posts</span>
+<span class="pcoded-mcaret"></span>
+</a>
+<ul class="pcoded-submenu">
+<li class=" ">
+<a href="{{route('dashboard.post.create')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Posts</span>
+<span class="pcoded-mcaret"></span>
+</a>
+</li>
+<li class="">
+<a href="{{route('dashboard.post.index')}}" class="waves-effect waves-dark">
+<span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+<span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View All Posts</span>
+<span class="pcoded-mcaret"></span>
+</a>
+</li>
+</ul>
+</li>
 
 <li class="pcoded-hasmenu">
 <a href="{{route('dashboard.ContentSocail.index')}}" class="waves-effect waves-dark">
@@ -372,45 +362,42 @@
 </ul>
 </li>
 
+</ul>
 
-                             </ul>
+</div>
+</nav>
+<div class="pcoded-content">
+<!-- Page-header start -->
+<div class="page-header">
+<div class="page-block">
+<div class="row align-items-center">
+<div class="col-md-8">
+<div class="page-header-title">
+<h5 class="m-b-10">Dashboard</h5>
+<p class="m-b-0">Welcome {{Auth::user()->name}}</p>
+</div>
+</div>
+<div class="col-md-4">
+<ul class="breadcrumb-title">
+<li class="breadcrumb-item">
+<a href="index.html"> <i class="fa fa-home"></i> </a>
+</li>
+<li class="breadcrumb-item"><a href="#">Dashboard</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Page-header end -->
+@yield('content')
+</div>
+</div>
+</div>
+</div>
+</div>
 
-
-
-                        </div>
-                    </nav>
-                    <div class="pcoded-content">
-                        <!-- Page-header start -->
-                        <div class="page-header">
-                            <div class="page-block">
-                                <div class="row align-items-center">
-                                    <div class="col-md-8">
-                                        <div class="page-header-title">
-                                            <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Welcome {{Auth::user()->name}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <ul class="breadcrumb-title">
-                                            <li class="breadcrumb-item">
-                                                <a href="index.html"> <i class="fa fa-home"></i> </a>
-                                            </li>
-                                            <li class="breadcrumb-item"><a href="#">Dashboard</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Page-header end -->
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @show
+@show
 
 
 

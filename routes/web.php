@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {return view('welcome');});
 Route::get('/', 'HomeController@user_page')->name('front.home');
-
+Route::get('/contact-form', 'ContactController@create');
+Route::post('/contact-form', 'ContactController@store')->name('contact');
 
 Auth::routes();
 

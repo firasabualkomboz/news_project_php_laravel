@@ -16465,3 +16465,6 @@ body.dark {
   bottom: 50px;
   opacity: 1;
 }
+a{
+    text-decoration: none !important;
+}

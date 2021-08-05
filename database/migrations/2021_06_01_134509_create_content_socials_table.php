@@ -14,11 +14,13 @@ class CreateContentSocialsTable extends Migration
     public function up()
     {
         Schema::create('content_socials', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('icon');
-            $table->timestamps();
+
+        $table->id();
+        $table->string('name');
+        $table->string('url');
+        $table->string('icon');
+        $table->timestamps();
+
         });
     }
 

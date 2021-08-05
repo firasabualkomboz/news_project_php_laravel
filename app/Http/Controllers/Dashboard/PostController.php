@@ -75,9 +75,11 @@ class PostController extends Controller
 
     public function edit($id)
     {
+
         $post = Post::find($id);
         return view('dashboard.post.edit')->with('post',$post)
         ->with('categories',Category::all())->with('tags',Tag::all());;
+        
     }
 
 
@@ -108,12 +110,7 @@ class PostController extends Controller
 
     } // end update
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $post = Post::findOrFail($id);

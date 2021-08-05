@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\ContentSocial;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -19,11 +20,7 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+
     public function index()
     {
         return view('home');
@@ -35,8 +32,10 @@ class HomeController extends Controller
         $get_all_category = Category::all();
         $lasted_posts    = Post::latest()->take(2)->get();
         $get_all_tags     =Tag::all();
+        $social         = ContentSocial::all();
 
-        return view('front.inedx',compact('get_all_category','lasted_posts','get_all_tags'))
+
+        return view('front.inedx',compact('get_all_category','lasted_posts','get_all_tags','social'))
         ->with('first_post' , Post::orderBy('created_at','desc')->first())
         ->with('second_post' , Post::orderBy('created_at','desc')->skip(1)->take(1)->get()->first())
         ->with('third_post' , Post::orderBy('created_at','desc')->skip(2)->take(1)->get()->first())
@@ -45,8 +44,8 @@ class HomeController extends Controller
         ->with('category_two',  Category::find(2))
         ->with('category_three',  Category::find(3))
         ->with('category_four',  Category::find(4))
-
-            ;
+        ->with('facebook_link',ContentSocial::find(1))
+        ;
     }
 
     public function show_single_page($slug){
@@ -56,8 +55,8 @@ class HomeController extends Controller
         $next_page = Post::where('id' , '>' ,$post->id)->min('id');
         $prev_page = Post::where('id' , '<' ,$post->id)->max('id');
         return view('front.single-page-posts',compact('post','get_all_category','get_all_tags'))
-            ->with('next' , Post::find($next_page))
-            ->with('prev' , Post::find($prev_page))
+        ->with('next' , Post::find($next_page))
+        ->with('prev' , Post::find($prev_page))
         ;
     }
 
