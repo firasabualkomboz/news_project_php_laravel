@@ -46,15 +46,17 @@
                         <th scope="row">{{$index}}</th>
                         <td>{{$post->title}}</td>
                         <td>{{$post->content}}</td>
-                        <td><img style="width: 10%" src="{{asset('/uploads/posts/'.$post->photo)}}" alt=""></td>
-                        {{-- <td>{{$post->category->name}}</td> --}}
-                        <td><button class="btn btn-primary"> <a href="{{ route('dashboard.post.edit', $post->id) }}"> <i class="fa fa-edit"></i> </a> </button>
+                        <td><img style="width: 10%" src="{{asset('uploads/posts/'.$post->photo) ?? 'NAN'}}" alt=""></td>
+                         <td>{{$post->category->name}}</td>
+                        <td><button class="btn btn-outline-primary btn-sm"> <a href="{{ route('dashboard.post.edit', $post->id) }}"> <i class="fa fa-edit"></i> </a> </button>
                         <form action="{{ route('dashboard.post.destroy', $post->id) }}" method="post" style="display: inline-block">
                         {{ csrf_field() }}
                         {{ method_field('delete') }}
-                        <button type="submit"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        <button type="submit"  class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>
                         </form><!-- end of form -->
+                            <button class="btn-sm btn btn-outline-warning"> <i  class="fa fa-eye" ></i></button>
                         </td>
+
                         </tr>
                         @endforeach
                         </tbody>
