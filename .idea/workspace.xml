@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e476ca4c-9270-4828-9902-eb99ffad7519" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,13 +160,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../palnews" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -198,7 +200,8 @@
       <option name="presentableId" value="Default" />
       <updated>1613563296901</updated>
       <workItem from="1613563297989" duration="18681000" />
-      <workItem from="1628164095341" duration="1889000" />
+      <workItem from="1628164095341" duration="2627000" />
+      <workItem from="1628314561849" duration="33000" />
     </task>
     <servers />
   </component>
@@ -219,13 +222,17 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613638012021">
-      <screen x="0" y="0" width="1536" height="832" />
+    <state x="586" y="187" key="FileChooserDialogImpl" timestamp="1628314593049">
+      <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state x="536" y="206" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.832@0.0.1536.832" timestamp="1613638012021" />
-    <state x="431" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1613564972097">
-      <screen x="0" y="0" width="1536" height="832" />
+    <state x="586" y="187" key="FileChooserDialogImpl/74.0.1462.864@74.0.1462.864" timestamp="1628314593049" />
+    <state x="492" y="76" key="SettingsEditor" timestamp="1628168736112">
+      <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state x="431" y="153" width="672" height="678" key="search.everywhere.popup/0.0.1536.832@0.0.1536.832" timestamp="1613564972097" />
+    <state x="492" y="76" key="SettingsEditor/74.0.1462.864@74.0.1462.864" timestamp="1628168736112" />
+    <state x="481" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1628314567784">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state x="481" y="256" key="com.intellij.ide.util.TipDialog/74.0.1462.864@74.0.1462.864" timestamp="1628314567784" />
   </component>
 </project>
