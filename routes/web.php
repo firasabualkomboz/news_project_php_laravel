@@ -44,6 +44,7 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
+        
     Route::get('/test', 'TestController@index')->name('test');
 });
 
